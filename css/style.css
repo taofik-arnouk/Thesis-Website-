@@ -74,12 +74,12 @@
 }
 
 .small {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 500;
 }
 
 .highlight {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 900;
   letter-spacing: 2px;
 
@@ -121,11 +121,11 @@
   }
 
   .small {
-    font-size: 56px;
+    font-size: 45px;
   }
 
   .highlight {
-    font-size: 56px;
+    font-size: 45px;
   }
 
   .text {
