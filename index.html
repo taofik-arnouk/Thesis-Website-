@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THESIS 2026</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+<!-- DESKTOP NAV -->
+<header class="navbar">
+  <div class="nav-logo">
+    <a href="#">THESIS 2026</a>
+  </div>
+
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#prototypes">Prototypes</a>
+    <a href="#Feedback">Feedback</a>
+    <a href="#people">The Team</a>
+  </nav>
+</header>
+
+<!-- MOBILE NAV -->
+<nav id="hamburger-nav">
+  <div class="nav-logo">
+    <a href="#">THESIS 2026</a>
+  </div>
+
+  <div class="hamburger-menu">
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu-links">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#prototypes" onclick="toggleMenu()">Prototypes</a>
+      <a href="#Feedback" onclick="toggleMenu()">Feedback</a>
+      <a href="#people" onclick="toggleMenu()">The Team</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO PAGE SNUSDOSA AND TEXT -->
+  <div class="wrapper">  
+    <!-- LEFT: spinning image -->
+    <div class="snus-container">
+<model-viewer
+   src="snusdosa.glb"
+  auto-rotate
+  auto-rotate-speed="3"
+  rotation-per-second="45deg"
+  camera-controls
+  disable-zoom
+></model-viewer>
+   </div>
+
+    
+    <!-- RIGHT: text -->
+    <!-- RIGHT: text -->
+<div class="text">
+  <div class="line small">Give Your</div>
+  <div class="line highlight">SNUSDOSA</div>
+  <div class="line small">A Second Use</div>
+</div>
+
+</div>
+   <div class="scroll-text">
+    <p>RECYCLE YOUR USED SNUSDOSA THIS WAY • RECYCLE YOUR USED SNUSDOSA THIS WAY •</p>
+   </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="neon">About</h2>
+  <div class="divider"></div>
+   <p>  
+    <b>Did you know that the average snus user throws out their empty can in combustible waste or 
+    even in some cases on the ground? Well... we noticed and decided to do something about it.</b>
+     <br>       <br>  
+
+    This study explores two different incentive approaches to evaluate whether such prototypes 
+    can reduce the improper disposal of snusdosor, particularly in natural environments. 
+    The aim is to develop engaging and interactive prototypes that encourage positive user 
+    experiences, motivating individuals to return and continue using them.
+  </p>
+</section>
+
+<!-- PROTOTYPES -->
+<section id="prototypes">
+  <h2 class="neon">Prototypes</h2>
+  <div class="divider"></div>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="Assets /Images/protoype1.png">
+      <div class="card-desc">Prototype 1 – In this protoype, the user can use their empty snusdosa 
+                             to vote with. In hopes of creating a fun and interactive way to handle 
+                             the empty snusdosa and create less chance to end up in nature.
+      </div>
+    </div>
+    <div class="card">
+      <img src="Assets /Images/prototype2.png">
+      <div class="card-desc">Prototype 2 – In this protoype, the user can use their empty snusdosa 
+                             to try their luck and see what they get. The user places their empty
+                             snusdosa in the correct slot and spin the crank twice to see what coin 
+                             they get. They may be rewarded with a drink, a grand prize, or nothing.
+                             This was made with fun in mind taking inspiration from gacha machines
+                             in which the user does not know what they will get, making it a fun
+                             interaction and experience.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SURVEY -->
+<section id="Feedback">
+  <h2 class="neon">Your Voice</h2>
+  <div class="divider"></div>
+  <p>Share your thoughts! We truly appreciate it and it helps us a lot!</p>
+
+  <a href="https://forms.gle/CsJoyijKCZkUbm5C7" target="_blank" class="button">
+    Answer the Survey
+  </a>
+</section>
+
+
+<!-- SURVEY -->
+<section id="people">
+  <h2 class="neon">Meet the team behind this!</h2>
+  <div class="divider"></div>
+
+  <div class="people">
+
+    <div class="person">
+      <h3>Taofik Arnouk</h3>
+      <p>Interaction Design and Technologies Master Program Chalmers University of Technology</p>
+      <p>LinkedIn: <a href="https://se.linkedin.com/in/taofik-arnouk-514b37240/sv">Let's connect!</a></p>
+      <p>Portfolio: <a href="https://www.taofikarnouk.com/">Look at my work!</a></p>
+    </div>
+
+    <div class="person">
+      <h3>Julia Giaro</h3>
+      <p>Interaction Design and Technologies Master Program Chalmers University of Technology</p>
+      <p>LinkedIn: <a href="#">Let's connect!</a></p>
+      <p>Portfolio: <a href="">Look at my work!</a></p>
+    </div>
+
+  </div>
+</section>
+
+<div class="scroll-text">
+  <p>RECYCLE YOUR USED SNUSDOSA THIS WAY • RECYCLE YOUR USED SNUSDOSA THIS WAY •</p>
+</div>
+
+<footer>
+  <p>© Thesis 2026</p>
+</footer>
+
+<script>
+/* Scroll animation for sliding text */
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  sections.forEach(section => {
+    if (section.getBoundingClientRect().top < trigger) {
+      section.classList.add("show");
+    }
+  });
+});
+
+/* For mobile mode touch affect for images */
+
+
+/* For mobile mode navbar */
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  menu.classList.toggle("open");
+}
+</script>
+
+</html>
