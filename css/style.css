@@ -180,7 +180,7 @@ section.show {
 
 
 
-/* Images used for prototypes */
+/* Prototypes models and description */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -188,64 +188,31 @@ section.show {
 }
 
 .card {
-  position: relative;
-  transform: rotate(-2deg);
-  transition: 0.4s;
-  overflow: hidden;
-}
-
-.card:nth-child(even) {
-  transform: rotate(2deg);
-}
-
-.card:hover {
-  transform: scale(1.05) rotate(0deg);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 15px;
-  filter: contrast(110%) saturate(120%);
-  transition: 0.3s ease;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 2px solid #038C7F;
-  border-radius: 15px;
-}
-
-/* FULL overlay */
-.card-desc {
-  position: absolute;
-  inset: 0;
-
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-
+  gap: 15px;
   padding: 20px;
+}
 
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-size: 12px;
+.card-text {
+  text-align: center;
+  font-size: 14px;
   line-height: 1.5;
-
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 15px;
 }
 
-/* hover only (desktop) */
-.card:hover .card-desc {
-  opacity: 1;
+/* model styling */
+.card model-viewer {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
 }
 
-.card:hover img {
-  opacity: 0.3;
+/* mobile */
+@media (max-width: 768px) {
+  .card model-viewer {
+    height: 250px;
+  }
 }
 
 
